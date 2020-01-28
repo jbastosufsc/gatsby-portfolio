@@ -1,8 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Jorge de Almeida Bastos Jr`,
+    description: `Kick off in my first Gatsby project.`,
+    author: `@jorgebastos10`,
+    menuLinks: [
+      {
+        name: `Sobre mim`,
+        link: `/`,
+      },
+      {
+        name: `Projetos`,
+        link: `/projetos`,
+      },
+      {
+        name: `Tecnologias`,
+        link: `/tecnologias`,
+      },
+      {
+        name: `Contato`,
+        link: `/contato`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

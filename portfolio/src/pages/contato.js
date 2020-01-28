@@ -2,12 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import "minireset.css"
-
-const IndexPage = () => (
+const ContatoPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Contato" />
   </Layout>
 )
 
-export default IndexPage
+export default ContatoPage
