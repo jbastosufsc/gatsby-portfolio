@@ -1,0 +1,15 @@
+Instalação do minireset css:
+
+Referência: 
+
+    https://github.com/jgthms/minireset.css
+
+Instalação: 
+    
+    yarn add minireset.css
+
+Configuração: 
+
+    /pages/index.js
+    import 'minireset.css';
+
