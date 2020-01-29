@@ -9,7 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import PageTitle from "../components/PageTitle/pagetitle"
+import Header from "./Header/header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -33,6 +34,8 @@ const Layout = ({ children }) => {
         menuLinks={data.site.siteMetadata.menuLinks}
         siteTitle={data.site.siteMetadata.title}
       />
+      <PageTitle></PageTitle>
+
       <div>
         <main>{children}</main>
         <footer>
