@@ -47,7 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: result.data.markdownRemark.fields.slug,
-      component: path.resolve(`./src/templates/default.js`),
+      component: path.resolve(`./src/templates/home.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
