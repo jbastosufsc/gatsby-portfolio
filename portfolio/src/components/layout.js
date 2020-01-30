@@ -9,12 +9,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import PageTitle from "../components/PageTitle/pagetitle"
 import Header from "./Header/header"
 import "./layout.css"
 
+import "minireset.css"
+
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  const dataNavMenu = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -31,10 +32,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header
-        menuLinks={data.site.siteMetadata.menuLinks}
-        siteTitle={data.site.siteMetadata.title}
+        menuLinks={dataNavMenu.site.siteMetadata.menuLinks}
+        siteTitle={dataNavMenu.site.siteMetadata.title}
       />
-      <PageTitle></PageTitle>
 
       <div>
         <main>{children}</main>
