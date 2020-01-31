@@ -1,6 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
+import TitlePage from "../../components/TitlePage/titlePage"
+
+import "./home.css"
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -8,9 +11,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-      </div>
+      <TitlePage siteTitle={post.frontmatter.title}></TitlePage>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )

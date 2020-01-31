@@ -19,3 +19,11 @@ main {
   max-width: 1100px;
   margin: 100px auto;
 }
+
+p + p {
+  margin-top: 10px;
+}
+
+.pageTitle {
+  margin-bottom: 40px;
+}
