@@ -4,7 +4,7 @@ module.exports = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark(filter: { fields: { slug: { ne: "/" } } }) {
+      allMarkdownRemark(filter: { frontmatter: { tipo: { eq: "pagina" } } }) {
         edges {
           node {
             fields {
@@ -13,7 +13,7 @@ module.exports = async ({ graphql, actions }) => {
           }
         }
       }
-      markdownRemark(fields: { slug: { eq: "/" } }) {
+      markdownRemark(frontmatter: { tipo: { eq: "home" } }) {
         fields {
           slug
         }

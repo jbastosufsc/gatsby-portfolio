@@ -1,5 +1,6 @@
 ---
 title: "Seja bem-vindo! 👋"
+tipo: "home"
 ---
 
 ### Conheça um pouco sobre o autor desta página:

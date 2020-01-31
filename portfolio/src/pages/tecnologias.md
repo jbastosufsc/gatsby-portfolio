@@ -1,9 +1,6 @@
 ---
 title: "Tecnologias"
+tipo: "pagina"
 ---
 
-Tecnologias
-Tecnologias
-Tecnologias
-Tecnologias
 Tecnologias
