@@ -12,7 +12,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <TitlePage siteTitle={post.frontmatter.title}></TitlePage>
-      AAAAAAA
+
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )

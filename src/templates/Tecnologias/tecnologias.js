@@ -6,16 +6,16 @@ import CardTecnologia from "../../components/CardTecnologia/cardTecnologia"
 
 export default ({ data }) => {
   const post = data.allMarkdownRemark
-
   return (
     <Layout>
       <h2>Tecnologias</h2>
-      {post.edges.map((techs, i) => {
+      {post.edges.map((tecnologia, i) => {
         return (
           <CardTecnologia
-            key={techs.node.id}
-            titulo={techs.node.frontmatter.title}
-            descricao={techs.node.frontmatter.descricao}
+            key={tecnologia.node.id}
+            titulo={tecnologia.node.frontmatter.title}
+            descricao={tecnologia.node.frontmatter.descricao}
+            img={tecnologia.node.frontmatter.img.childImageSharp.fixed}
           />
         )
       })}
@@ -31,6 +31,13 @@ export const query = graphql`
           frontmatter {
             title
             descricao
+            img {
+              childImageSharp {
+                fixed(width: 56) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }
