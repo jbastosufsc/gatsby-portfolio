@@ -18,7 +18,7 @@ export default ({ data }) => {
                 key={tecnologia.node.id}
                 titulo={tecnologia.node.frontmatter.title}
                 descricao={tecnologia.node.frontmatter.descricao}
-                img={tecnologia.node.frontmatter.img.childImageSharp.fixed}
+                image={tecnologia.node.frontmatter.image.childImageSharp.fixed}
                 body={tecnologia.node.excerpt}
               />
             )
@@ -38,7 +38,7 @@ export const query = graphql`
           frontmatter {
             title
             descricao
-            img {
+            image {
               childImageSharp {
                 fixed(width: 56) {
                   ...GatsbyImageSharpFixed

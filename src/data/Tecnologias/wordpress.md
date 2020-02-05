@@ -2,5 +2,5 @@
 title: "Wordpress"
 descricao: "Desenvolvimento Web (Front-end e Back-end)"
 tipo: "tecnologia"
-img: ./images/wordpress-icon.png
+image: ./images/wordpress-icon.png
 ---

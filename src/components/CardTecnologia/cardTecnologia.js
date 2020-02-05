@@ -3,10 +3,10 @@ import Img from "gatsby-image"
 
 import "./cardTecnologia.css"
 
-const CardTecnologia = ({ titulo, descricao, img, body }) => {
+const CardTecnologia = ({ titulo, descricao, image, body }) => {
   return (
     <div className="cardBox">
-      <Img className="cardBoxImg" fixed={img} />
+      <Img className="cardBoxImg" fixed={image} />
       <div className="cardBoxTexto">
         <p>{titulo}</p>
         <p>{descricao}</p>
