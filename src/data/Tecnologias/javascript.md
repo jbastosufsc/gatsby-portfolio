@@ -1,6 +1,6 @@
 ---
 title: "Javascript"
-descricao: "Javascript é legal"
+descricao: "Desenvolvimento Web (Front-end e Back-end)"
 tipo: "tecnologia"
 img: ./images/javascript-icon.png
 ---

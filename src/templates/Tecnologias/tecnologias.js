@@ -3,22 +3,28 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 //import TitlePage from "../../components/TitlePage/titlePage"
 import CardTecnologia from "../../components/CardTecnologia/cardTecnologia"
+import "./tecnologias.css"
 
 export default ({ data }) => {
   const post = data.allMarkdownRemark
   return (
     <Layout>
-      <h2>Tecnologias</h2>
-      {post.edges.map((tecnologia, i) => {
-        return (
-          <CardTecnologia
-            key={tecnologia.node.id}
-            titulo={tecnologia.node.frontmatter.title}
-            descricao={tecnologia.node.frontmatter.descricao}
-            img={tecnologia.node.frontmatter.img.childImageSharp.fixed}
-          />
-        )
-      })}
+      <div id="templateTecnologias">
+        <h2>Tecnologias</h2>
+        <div id="cardsTecnologias">
+          {post.edges.map((tecnologia, i) => {
+            return (
+              <CardTecnologia
+                key={tecnologia.node.id}
+                titulo={tecnologia.node.frontmatter.title}
+                descricao={tecnologia.node.frontmatter.descricao}
+                img={tecnologia.node.frontmatter.img.childImageSharp.fixed}
+                body={tecnologia.node.excerpt}
+              />
+            )
+          })}
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -28,6 +34,7 @@ export const query = graphql`
     allMarkdownRemark(filter: { frontmatter: { tipo: { eq: "tecnologia" } } }) {
       edges {
         node {
+          excerpt
           frontmatter {
             title
             descricao

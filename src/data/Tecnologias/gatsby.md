@@ -1,6 +1,6 @@
 ---
 title: "Gatsby"
-descricao: "Gatsby é legal"
+descricao: "Desenvolvimento Web (Front-end)"
 tipo: "tecnologia"
 img: ./images/gatsby-icon.png
 ---

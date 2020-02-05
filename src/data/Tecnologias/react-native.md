@@ -1,6 +1,6 @@
 ---
 title: "React Native"
-descricao: "React Native é legal"
+descricao: "Desenvolvimento Mobile ( APPs )"
 tipo: "tecnologia"
 img: ./images/react-icon.png
 ---

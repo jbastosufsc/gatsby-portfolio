@@ -1,6 +1,6 @@
 ---
 title: "React"
-descricao: "React é legal"
+descricao: "Desenvolvimento Web (Front-end)"
 tipo: "tecnologia"
 img: ./images/react-icon.png
 ---

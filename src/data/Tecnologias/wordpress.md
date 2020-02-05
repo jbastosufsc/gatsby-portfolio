@@ -1,6 +1,6 @@
 ---
 title: "Wordpress"
-descricao: "Wordpress é legal"
+descricao: "Desenvolvimento Web (Front-end e Back-end)"
 tipo: "tecnologia"
 img: ./images/wordpress-icon.png
 ---

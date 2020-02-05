@@ -1,0 +1,17 @@
+.cardBox {
+  display: flex;
+}
+
+.cardBoxImg {
+  margin: auto 0;
+  min-width: 56px;
+  min-height: 56px;
+}
+
+.cardBoxTexto p + p {
+  margin-top: 5px;
+}
+
+.cardBoxTexto {
+  margin: auto 10px;
+}

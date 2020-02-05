@@ -1,12 +1,16 @@
 import React from "react"
 import Img from "gatsby-image"
 
-const CardTecnologia = ({ titulo, descricao, img }) => {
+import "./cardTecnologia.css"
+
+const CardTecnologia = ({ titulo, descricao, img, body }) => {
   return (
-    <div>
-      <p>{titulo}</p>
-      <p>{descricao}</p>
-      <Img fixed={img} />
+    <div className="cardBox">
+      <Img className="cardBoxImg" fixed={img} />
+      <div className="cardBoxTexto">
+        <p>{titulo}</p>
+        <p>{descricao}</p>
+      </div>
     </div>
   )
 }
