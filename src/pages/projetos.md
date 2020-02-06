@@ -1,4 +1,4 @@
 ---
 title: "Projetos"
-tipo: "pagina"
+tipo: "projetos"
 ---

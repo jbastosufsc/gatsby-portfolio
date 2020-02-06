@@ -1,7 +1,7 @@
 ---
 title: "Rocketseat - Bootcamp 10"
-url: https://drapaulaproctologista.com.br/
+url: Inserir Github
 atividades: "Node.js, React, React Native"
 tipo: "projeto"
-img: ./images/rocketseat.png
+image: ./images/rocketseat.png
 ---

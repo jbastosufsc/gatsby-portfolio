@@ -37,6 +37,16 @@ module.exports = async ({ graphql, actions }) => {
     }
   `)
 
+  const queryProjetos = await graphql(`
+    query {
+      markdownRemark(frontmatter: { tipo: { eq: "projetos" } }) {
+        fields {
+          slug
+        }
+      }
+    }
+  `)
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
@@ -68,6 +78,17 @@ module.exports = async ({ graphql, actions }) => {
       // Data passed to context is available
       // in page queries as GraphQL variables.
       slug: queryTecnologias.data.markdownRemark.fields.slug,
+    },
+  })
+
+  //cria pagina Projetos
+  createPage({
+    path: queryProjetos.data.markdownRemark.fields.slug,
+    component: path.resolve(`./src/templates/Projetos/projetos.js`),
+    context: {
+      // Data passed to context is available
+      // in page queries as GraphQL variables.
+      slug: queryProjetos.data.markdownRemark.fields.slug,
     },
   })
 }

@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/layout"
-//import TitlePage from "../../components/TitlePage/titlePage"
 import CardTecnologia from "../../components/CardTecnologia/cardTecnologia"
 import "./tecnologias.css"
 
