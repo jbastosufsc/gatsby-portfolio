@@ -32,13 +32,10 @@ Things to Develop:
 
 * Separar projetos em: profissionais e pessoais
 
-Página Tecnologias:
-    * Fazer algum tipo de filtro
+* Página Tecnologias:
+    - Fazer algum tipo de filtro
 
-/src/
-    * remover image.js e seo.js
+* /src/
+    - remover image.js e seo.js
 
-
-
-
-
+* Adicionar opção de alterar CSS para escuro
