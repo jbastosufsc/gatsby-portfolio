@@ -1,17 +1,21 @@
-.cardBox {
+#cardBox {
   display: flex;
+  background: #fff;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  padding: 20px;
 }
 
-.cardBoxImg {
+#cardBoxImg {
   margin: auto 0;
   min-width: 56px;
   min-height: 56px;
 }
 
-.cardBoxTexto p + p {
+#cardBox div > p + p {
   margin-top: 5px;
 }
 
-.cardBoxTexto {
-  margin: auto 10px;
+#cardBox > div {
+  margin: auto;
 }

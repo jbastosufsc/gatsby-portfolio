@@ -6,8 +6,8 @@ import "./cardProjeto.css"
 const cardProjeto = ({ titulo, atividades, url, imagem }) => {
   return (
     <li>
-      <Img fixed={imagem} />
       <h3>{titulo}</h3>
+      <Img fixed={imagem} />
       <p>{atividades}</p>
       <p>{url}</p>
     </li>
