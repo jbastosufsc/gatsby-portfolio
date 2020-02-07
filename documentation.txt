@@ -24,12 +24,21 @@ Instalação:
     yarn add gatsby-source-filesystem
 ---------------------------------
 
+Things to Develop:
+
+* Transcribe code in English language;
+
+* Software internationalization 
+
+* Separar projetos em: profissionais e pessoais
 
 Página Tecnologias:
     * Fazer algum tipo de filtro
 
 /src/
     * remover image.js e seo.js
+
+
 
 
 

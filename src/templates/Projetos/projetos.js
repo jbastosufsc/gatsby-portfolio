@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
-import Img from "gatsby-image"
+import CardProjeto from "../../components/CardProjeto/cardProjeto"
 
 import "./projetos.css"
 
@@ -10,16 +10,20 @@ export default ({ data }) => {
     <Layout>
       <div id="templateProjetos">
         <h2>Projetos</h2>
-        <div id="cardsProjeto">
-          {post.map((projetos, i) => {
-            return (
-              <li>
-                <div>{projetos.node.frontmatter.title}</div>
-                <div>{projetos.node.frontmatter.atividades}</div>
-                <div>{projetos.node.frontmatter.url}</div>
-              </li>
-            )
-          })}
+        <div id="cardProjeto">
+          <ul>
+            {post.map((projeto, i) => {
+              return (
+                <CardProjeto
+                  key={projeto.node.id}
+                  titulo={projeto.node.frontmatter.title}
+                  atividades={projeto.node.frontmatter.atividades}
+                  url={projeto.node.frontmatter.url}
+                  imagem={projeto.node.frontmatter.image.childImageSharp.fixed}
+                />
+              )
+            })}
+          </ul>
         </div>
       </div>
     </Layout>
@@ -37,7 +41,7 @@ export const query = graphql`
             atividades
             image {
               childImageSharp {
-                fixed(width: 56) {
+                fixed(width: 336) {
                   ...GatsbyImageSharpFixed
                 }
               }
