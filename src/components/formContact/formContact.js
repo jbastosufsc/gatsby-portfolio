@@ -2,7 +2,7 @@ import React from "react"
 
 const FormContact = () => {
   return (
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" action="POST" data-netlify="true">
       <p>
         <label>
           Your Name: <input type="text" name="name" />
@@ -27,6 +27,9 @@ const FormContact = () => {
           Message: <textarea name="message"></textarea>
         </label>
       </p>
+      <div className="field">
+        <div data-netlify-recaptcha="true"></div>
+      </div>
       <p>
         <button type="submit">Send</button>
       </p>
