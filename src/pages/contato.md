@@ -1,6 +1,4 @@
 ---
 title: "Contato"
-tipo: "pagina"
+tipo: "contact"
 ---
-
-Teste Html

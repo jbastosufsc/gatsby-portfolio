@@ -3,20 +3,6 @@ const path = require("path")
 module.exports = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const result = await graphql(`
-    query {
-      allMarkdownRemark(filter: { frontmatter: { tipo: { eq: "pagina" } } }) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
-
   const queryHome = await graphql(`
     query {
       markdownRemark(frontmatter: { tipo: { eq: "home" } }) {
@@ -47,17 +33,15 @@ module.exports = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/templates/blog-post.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
-    })
-  })
+  const queryContact = await graphql(`
+    query {
+      markdownRemark(frontmatter: { tipo: { eq: "contact" } }) {
+        fields {
+          slug
+        }
+      }
+    }
+  `)
 
   //cria a pagina Home
   createPage({
@@ -89,6 +73,17 @@ module.exports = async ({ graphql, actions }) => {
       // Data passed to context is available
       // in page queries as GraphQL variables.
       slug: queryProjetos.data.markdownRemark.fields.slug,
+    },
+  })
+
+  //cria pagina Contact
+  createPage({
+    path: queryContact.data.markdownRemark.fields.slug,
+    component: path.resolve(`./src/templates/Contact/contact.js`),
+    context: {
+      // Data passed to context is available
+      // in page queries as GraphQL variables.
+      slug: queryContact.data.markdownRemark.fields.slug,
     },
   })
 }
