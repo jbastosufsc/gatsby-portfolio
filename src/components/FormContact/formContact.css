@@ -1,0 +1,31 @@
+.sectionForm {
+  width: 500px;
+  margin: 0 2rem 0 0;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm button {
+  margin: 1rem 0 0 0;
+}
+
+.wrapInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wrapInput label {
+  margin: 0 0 1rem 0;
+}
+
+.wrapInput textarea {
+  height: 60px;
+  width: 500px;
+}
+
+.wrapInput + .wrapInput {
+  margin: 1rem 0 0 0;
+}

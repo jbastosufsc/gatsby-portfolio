@@ -1,0 +1,28 @@
+.sectionInfo {
+}
+
+.sectionInfo .blockInfo {
+}
+
+.sectionInfo .blockInfo h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.sectionInfo .blockInfo h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0000008f;
+}
+
+.sectionInfo .blockInfo p {
+  font-size: 14px;
+  color: #0000008f;
+}
+
+.sectionInfo .blockInfo + .blockInfo {
+  margin-top: 20px;
+}
+
+.socialIcon {
+  color: red;
+}
