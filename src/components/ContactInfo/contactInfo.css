@@ -23,6 +23,11 @@
   margin-top: 20px;
 }
 
+.blockInfo a + a {
+  margin-left: 10px;
+}
+
 .socialIcon {
-  color: red;
+  font-size: 25px;
+  color: #000;
 }

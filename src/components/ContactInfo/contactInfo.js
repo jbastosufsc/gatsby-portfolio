@@ -1,5 +1,6 @@
 import React from "react"
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"
+import Img from "gatsby-image"
 
 import "./contactInfo.css"
 
@@ -19,9 +20,15 @@ export default function ContactInfo() {
       </div>
       <div className="blockInfo">
         <h4>Social</h4>
-        <FaLinkedin className="socialIcon" />
-        <FaGithub className="socialIcon" />
-        <FaInstagram className="socialIcon" />
+        <a href="https://www.linkedin.com/in/jorgebastosjr/" target="_blank">
+          <FaLinkedin className="socialIcon" />
+        </a>
+        <a href="https://github.com/jbastosufsc" target="_blank">
+          <FaGithub className="socialIcon" />
+        </a>
+        <a href="https://instagram.com/jorgebastos10" target="_blank">
+          <FaInstagram className="socialIcon" />
+        </a>
       </div>
     </section>
   )
