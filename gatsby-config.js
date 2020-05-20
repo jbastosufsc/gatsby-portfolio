@@ -10,7 +10,7 @@ module.exports = {
       linkedin: `/jorgebastosjr`,
       instagram: `@jorgebastos10`
     },
-    image: `src/images/gatsby-icon.png`,
+    image: `src/images/jorge.jpeg`,
     menuLinks: [
       {
         name: `Sobre mim`,
