@@ -10,6 +10,7 @@ module.exports = {
       linkedin: `/jorgebastosjr`,
       instagram: `@jorgebastos10`
     },
+    image: `./src/images/gatsby-icon.png`,
     menuLinks: [
       {
         name: `Sobre mim`,
@@ -67,7 +68,43 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'http://jorgebastos.tk/',
+        sitemap: 'http://jorgebastos.tk/sitemap.xml',
+        env: {
+          development: {
+            policy: [ { userAgent: '*', disallow: [ '/' ] } ]
+          },
+          production: {
+            policy: [ { userAgent: '*', allow: '/' } ]
+          }
+        }
+      }
+    },
+    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-next-seo`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `company-analytics-id`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Jorge Bastos`,
+        short_name: `jbastos`,
+        start_url: `/`
+        // background_color: `$predominant-color`
+        // theme_color: `$predominant-color`,
+        // display: `minimal-ui`,
+        // icon: `content/assets/$icon-name.svg`,
+      }
+    },
+    'gatsby-plugin-offline'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

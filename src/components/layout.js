@@ -8,6 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { SocialProfileJsonLd } from "gatsby-plugin-next-seo"
+
 
 import Header from "./Header/header"
 import "./layout.css"
@@ -31,6 +33,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <SocialProfileJsonLd
+        type="Person"
+        name="$SiteName "
+        url="$siteurl"
+        sameAs={[
+          "https://www.facebook.com/jbastos10/",
+          "https://instagram.com/jorgebastos10/",
+          "https://www.linkedin.com/in/jorgebastosjr/",
+        ]}
+      />
       <Header
         menuLinks={dataNavMenu.site.siteMetadata.menuLinks}
         siteTitle={dataNavMenu.site.siteMetadata.title}
