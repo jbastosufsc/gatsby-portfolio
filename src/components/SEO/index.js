@@ -12,7 +12,7 @@ const SEO = () => {
             defaultTitle: title
             titleTemplate
             defaultDescription: description
-            siteURL
+            siteUrl
             social {
               github
               linkedin
@@ -28,8 +28,8 @@ const SEO = () => {
   const seo = {
     title: company.title || company.defaultTitle,
     description: company.description || company.defaultDescription,
-    image: `${company.siteURL}${company.image || company.defaultImage}`,
-    url: `${company.siteURL}${company.pathname || '/'}`
+    image: `${company.siteUrl}${company.image || company.defaultImage}`,
+    url: `${company.siteUrl}${company.pathname || '/'}`
   }
 
   return (

@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: `Personal Jorge's Webpage`,
     description: `Kick off in my first Gatsby project.`,
     author: `@jorgebastos10`,
-    siteURL: `http://jorgebastos.tk/`,
+    siteUrl: `http://jorgebastos.tk/`,
     social: {
       github: `/jbastosufsc`,
       linkedin: `/jorgebastosjr`,
