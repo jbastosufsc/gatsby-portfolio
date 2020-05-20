@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
     <>
       <SocialProfileJsonLd
         type="Person"
-        name="$SiteName "
-        url="$siteurl"
+        name="Jorge Bastos "
+        url="http://jorgebastos.tk/"
         sameAs={[
           "https://www.facebook.com/jbastos10/",
           "https://instagram.com/jorgebastos10/",
